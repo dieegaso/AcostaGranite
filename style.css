@@ -1,0 +1,386 @@
+:root{
+    --main-color:rgb(109, 95, 39);
+    --sec-color:rgb(0, 0, 0);
+    --third-color:rgb(31, 31, 31);
+    --fourth-color:rgb(255, 255, 255);
+    --Ocre: rgb(99, 55, 55);
+    --Gold: rgb(109, 95, 39);
+}
+
+
+@media(prefers-color-scheme:light){
+    :root{
+        --main-color:rgb(99, 55, 55);
+        --sec-color:white;
+        --fourth-color:black;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:white;
+    margin: 0px;;
+    font-size: clamp(1rem,1.25vw,1.5rem);
+    font-family: 'Poppins';
+    box-shadow: 
+        inset 10px 0 25px -10px rgba(0, 0, 0, 0.25),
+        inset -10px 0 25px -10px rgba(0, 0, 0, 0.25);
+}
+
+a {
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+    color: var(--main-color);
+    font-size: clamp(1.5rem,2vw,2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+h3{
+    color: rgb(116, 114, 114);
+    font-size: clamp(1rem,1.5vw,1.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90vw;
+    color: var(--main-color);
+    padding: 1%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    justify-self: center;
+    justify-content: space-around;
+}
+
+#Logo {
+    height: clamp(8em, 15vw, 10em);
+}
+
+header a:hover{
+    transform: translateY(-5px);
+}
+
+
+.introduction{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--main-color);
+    justify-content: center;
+    align-content: center;
+    text-align: justify;
+    height: 100vh;
+}
+
+
+.introduction p{
+    max-width: 75%;
+}
+
+
+/*main*/
+main > section:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+section {
+    padding: 5%;
+}
+
+.section-title{
+    padding: 5% 0;
+    margin: 0;
+}
+
+
+.info-container{
+    padding: 0 5%;
+}
+
+.info-container p{
+    margin-bottom: 21.4px;
+}
+
+
+.info-box{
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    gap: 5%;
+    justify-content: space-between;
+}
+
+.info-box:nth-child(4){
+    border-bottom: 0;
+}
+
+.info-pic{
+    /* width: 30%; */
+    flex-basis: 30%;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    border-radius: 2vh;
+}
+
+.info-box:nth-child(even) .info-pic{
+    order: 1;
+}
+
+.info-text{
+    flex-basis: min(40%,750px);
+    flex-grow: 1;
+    text-align: justify;
+    /* align-content: center; */
+    /* box-shadow: inset 0 0 25px; */
+    border-radius: 2vh;
+}
+
+.slider-nav{
+    display: none;
+}
+
+
+
+/* Estimate style*/
+
+.Estimate{
+    align-content: center;
+}
+
+.Estimate_container{
+    display: flex;
+    padding: 0 5%;
+    width: fit-content;
+    align-items: start;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.Price_calculator{
+    flex: 0 0 45%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.sub_section{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.sub_section > *{
+    flex: 1 1;
+    text-wrap: nowrap;
+    margin-bottom: 2ch;
+}
+
+.sub_section select, input{
+    padding: 1ch;
+    border: 1px solid black;
+    border-radius: 5ch;
+    width: 100%;
+    text-align: center;
+}
+
+.Estimate_container button{
+    font-size: inherit;
+    padding: 0.5ch;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5ch;
+}
+
+
+@media (max-width: 1100px){
+
+    .info-container{
+        overflow: scroll;
+    }
+
+    .info-box{
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        justify-content: center;
+    }
+
+    .info-pic{
+        order: 1;
+        align-self: flex-start;
+        min-width: 235px;
+    }
+    .info-text{
+        align-self: flex-start;
+        flex-basis: 75%;
+        /* background-color: rebeccapurple; */
+    }
+    
+    .info-text h2{
+        text-align: left;
+    }
+
+    .slider-nav{
+        display: flex;
+        padding: 2rem 0;
+        justify-content: center;
+        column-gap: 1rem;
+    }
+
+    .slider-nav a{
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0.5;
+        transition: opacity ease 500ms;
+    }
+
+    .slider-nav a:hover{
+        opacity: 1;
+    }
+
+
+    .Estimate_container{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+    .Estimate_container > *{
+        flex: 1 1 auto;
+    }
+
+    .Price_calculator > *{
+        text-align: center;
+    }
+
+    .sub_section {
+        flex: 1 1;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sub_section select, input{
+        min-width: 120px;
+    }
+
+    .sub_section button{
+        max-width: 200px;
+    }
+
+    .pop_up{
+        width: 50vw;
+    }
+}
+
+/*About Us*/
+
+.aboutUs-container{
+    padding: 0 5%;
+}
+
+.aboutUs p {
+    text-indent: 2em;
+}
+
+/*Footer Style*/
+
+
+.Footer {
+    padding: 5rem 0rem;
+    font-size: clamp(0.75rem,1.25vw,1rem);
+    justify-items: center;
+    background-color: rgba(0 , 0 , 0, 0.1);
+}
+
+
+
+
+/*Gallery*/
+
+.introduction_2{
+    display: flex;
+    height: 50vh;
+    padding: 5% 3rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5%;
+}
+.introduction_2 h1{
+    font-size: clamp(1rem,4vw,5rem);
+    text-transform: uppercase;
+    color: rgb(138, 126, 78);
+    text-shadow: 5px 2px rgb(194, 190, 190);
+    letter-spacing: 1ch;
+}
+
+
+.dropdown_selector{
+    display: flex;
+    margin: 0 2rem 0 2rem;
+}
+
+.dropdown_selector button{
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: inherit;
+    color: var(--main-color);
+}   
+
+.dropdown_selector button:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.dropdown_container{
+    padding: 3rem 5%;
+    background-color: rgba(0, 0, 0, 0.15);
+    
+}
+
+.dropdown_images{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 10px;
+    align-content: space-around;
+    max-height: 50rem;
+}
+
+.dropdown_images:nth-child(1){
+    display: flex;
+}
+
+.dropdown_images img{
+    max-width: 50%;
+    cursor: pointer;
+}

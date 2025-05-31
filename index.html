@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acosta Granite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body id="body">
+    <header>
+        <a href="index.html">Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="#footer">Contact Us</a>
+        <a href="https://www.facebook.com/FranciscoPA1234" target="_blank" rel="noopener">Social</a>
+    </header>
+    
+    <main>
+        <section>
+            <div class="introduction">
+                <img src="/Images/Logo_v3.png" id="Logo">
+                <p><strong>Acosta Custom Granite</strong> was established in 2015 when Francisco Pina took the bold step of starting his own granite company. 
+                    With over 10 years of experience, we guarantee exceptional quality of work like you've never seen before. 
+                    Our main goal is to strive for perfection in every possible way, while making sure our customers’ 
+                    wishes and vision are always a top priority.
+                </p>
+            </div>
+        </section>
+        
+        <section class="info-container-wrapper">
+            <h2 class="section-title">What kind of work we do?</h2>
+            <div class="info-container">     
+                <div class="info-box" id="info-box-1">               
+                    <div class="info-pic" style="background-image: url('/Images/Kitchen5.jpg');"></div>
+                    <div class="info-text"> 
+                        <h3>Kitchen</h3>
+                        <p> 
+                            The kitchen is known as the heart of the home—and what better way to
+                             elevate it than with stunning new countertops that are sure to impress 
+                             your guests? At Acosta Custom Granite, we’re here to bring your dream 
+                             kitchen to life, whether you're remodeling your current space or building 
+                             a brand new home. It doesn’t matter what kind of design you 
+                             have—we guarantee a refined touch that enhances any style.
+                             With us, you can never go wrong.  
+                        </p>
+                    </div>        
+                </div>
+                
+                <div class="info-box" id="info-box-2">               
+                    <div class="info-pic" style="background-image: url('/Images/Outdoor1.jpg');"></div>
+                    <div class="info-text">
+                        <h3>Outdoor</h3>
+                        <p> Take your outdoor living to the next level with custom 
+                            countertops designed for entertaining. Whether you're hosting a 
+                            weekend cookout or enjoying a quiet evening under the stars, 
+                            Acosta Custom Granite delivers durable, weather-resistant
+                             surfaces that blend beauty with functionality. Our expert
+                              craftsmanship ensures your outdoor kitchen or bar area becomes 
+                            the perfect gathering spot—built to impress and made to last.
+                        </p>
+                    </div>        
+                </div>
+                
+                <div class="info-box" id="info-box-3">               
+                    <div class="info-pic" style="background-image: url('/Images/Bathroom.jpg');" ></div>
+                    <div class="info-text"> 
+                        <h3>Bathroom</h3> 
+                        <p> Transform your bathroom into a luxurious retreat 
+                            with custom countertops from Acosta Custom Granite.
+                             Whether you're going for a sleek modern look or timeless elegance, 
+                             we provide high-quality, durable surfaces that elevate both style 
+                             and functionality. From vanities to custom sinks, we bring expert 
+                             craftsmanship and a refined 
+                            touch to every detail—because even the smallest spaces deserve perfection.
+                        </p>
+                    </div>        
+                </div>
+                
+                <div class="info-box" id="info-box-4">               
+                    <div class="info-pic"  style="background-image: url('/Images/FirePlace.jpg');"></div>
+                    <div class="info-text"> 
+                        <h3>Custom and Repairs</h3>
+                        <p>At Acosta Custom Granite, we specialize in more 
+                            than just kitchens and bathrooms—we bring your unique 
+                            visions to life with custom stonework tailored to your space. 
+                            Whether it's a one-of-a-kind fireplace, an eye-catching accent wall, 
+                            or any other custom project, our team is ready to deliver stunning 
+                            results with precision and care. We also offer expert repair services
+                             to restore the beauty and integrity of your existing granite surfaces.
+                              No matter the job, big or small, 
+                            you can count on us for quality, reliability, and a refined finish every time.
+                        </p>
+                    </div>        
+                </div>
+            </div>
+        </section>
+            
+        <section class="Estimate">
+            <h2 class="section-title">Know your square footage?</h2>
+            <div class="Estimate_container">
+                <div class="Price_details">
+                    <p>Curious about the cost of your project? If you know
+                         the square footage of your space, our website makes
+                          it easy to get an estimate! Simply enter your measurements
+                           and select the type of granite you’re interested in—we’ll
+                            give you a general idea of the cost to help you get started. 
+                            It’s a quick 
+                        and convenient way to plan your next upgrade with Acosta Custom Granite.
+                    </p>
+                </div>
+                
+                <div class="Price_calculator">
+                    <div class="sub_section">
+                        <h2>Estimate Here</h2> 
+                    </div>
+                    <div class="sub_section">
+                        <label for="Feet">Total Square Footage</label>
+                        <input type="tel" name="Feet" placeholder="Enter Square Footage" id="ft2" required> 
+                    </div>
+                    
+                    <div class="sub_section">
+                        <label > Type of Material</label>
+                        <select id="mySelect">
+                            <option disabled hidden selected>Choose Material</option>
+                            <option value="Granite">Granite</option>
+                            <option value="Quarts">Quarts</option>
+                            <option value="Leather">Leather</option>
+                            <option value="Marble">Marble</option>
+                        </select>
+                    </div>
+                    
+                    <div class="sub_section">
+                        <button id="SubmitOption">Submit</button>
+                        <button id="ResetOption">Reset</button>
+                        
+                    </div>
+                    
+                    <div class="sub_section">
+                        <label>Your Price:</label>
+                        <label id="price-calculated" >$ ---</label>      
+                    </div>
+                    
+                </div>
+                
+            </div>        
+        </section>    
+            
+        
+        <section>
+            <h2 class="section-title">About Us</h2>
+            <div class="aboutUs-container"> 
+                <p>   
+                    Welcome to Acosta Granite, where <strong>excellence</strong> meets 
+                    <strong>elegance</strong> in the world
+                    of granite countertops. At Acosta Granite, we take pride in transforming
+                    spaces with the timeless beauty and durability of granite. Our commitment to 
+                    <strong>perfection</strong> is evident in every detail, ensuring that your countertops not 
+                    only meet but exceed your expectations. 
+                </p>
+                
+                <p>
+                    Why choose Acosta Granite? Our team of <strong>skilled professionals</strong> 
+                    combines expertise with a passion for craftsmanship. We source the 
+                    <strong>finest quality granite</strong>, carefully selecting each slab to guarantee 
+                    both beauty and durability. With meticulous attention to detail, 
+                    we ensure that every cut, polish, and installation is executed with 
+                    precision, creating stunning countertops that become the centerpiece 
+                    of your kitchen or bathroom
+                </p>
+                
+                <p>
+                    Discover the difference of granite countertops from 
+                    Acosta Granite. Elevate your living spaces with the 
+                    unparalleled beauty and craftsmanship that defines us. 
+                    Welcome to a world where perfection meets satisfaction – 
+                    welcome to Acosta Granite.
+                </p>   
+            </div>
+        </section>
+    </main>
+    
+    <footer class="Footer" id="footer">
+        <div>
+            Contact us at 832-xxx
+        </div>
+        <div>
+            acostagranitet@gmail.com
+        </div>
+        <div>
+            AcostaGranite.com
+        </div>
+    </footer>
+    
+</body>
+
+
+<script src="script.js"></script>
+</html>
