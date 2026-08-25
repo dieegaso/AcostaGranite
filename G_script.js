@@ -9,7 +9,7 @@ let dropdown_container = document.querySelector(".dropdown_container");
  
 
 dropdown_selector.addEventListener("click", function(event) {
-    //Create an array of the byuttons and teh image container 
+    //Create an array of the byuttons and the image container 
     let img_disp = Array.from(dropdown_container.children);
     let buttons = Array.from(this.children); 
     let index = buttons.indexOf(event.target);

@@ -52,15 +52,11 @@ h3{
 }
 
 header {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     flex-wrap: nowrap;
     width: 90vw;
     color: var(--main-color);
-    padding: 1%;
+    padding: 1.5em;
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
@@ -145,7 +141,6 @@ section {
 .info-text{
     flex-basis: min(40%,750px);
     flex-grow: 1;
-    text-align: justify;
     /* align-content: center; */
     /* box-shadow: inset 0 0 25px; */
     border-radius: 2vh;
@@ -310,12 +305,18 @@ section {
 
 
 .Footer {
-    padding: 5rem 0rem;
+    padding: 2em;
     font-size: clamp(0.75rem,1.25vw,1rem);
     justify-items: center;
-    background-color: rgba(0 , 0 , 0, 0.1);
+    background-color: rgba(0, 0, 0);
+    color: var(--fourth-color);
 }
 
+h4{
+    color: rgb(116, 114, 114);
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
 
 
 
@@ -323,13 +324,16 @@ section {
 
 .introduction_2{
     display: flex;
-    height: 50vh;
     padding: 5% 3rem;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 5%;
 }
+#Logo_Gallery {
+    height: clamp(5em, 15vw, 10em);
+}
+
 .introduction_2 h1{
     font-size: clamp(1rem,4vw,5rem);
     text-transform: uppercase;
@@ -346,12 +350,10 @@ section {
 
 .dropdown_selector button{
     border: none;
-    border-radius: 0;
     cursor: pointer;
     flex: 1 1 auto;
-    padding: 1rem;
+    padding: 1em;
     background-color: rgba(0, 0, 0, 0);
-    font-size: inherit;
     color: var(--main-color);
 }   
 
