@@ -1,5 +1,5 @@
 //Highlight Kitchen button at first 
-document.querySelector(".dropdown_selector button:nth-child(1)").style.cssText = "background-color: rgba(0,0,0,0.15); box-shadow: inset 0px 5px 15px -10px;";
+document.querySelector(".dropdown_selector button:nth-child(1)").style.cssText = "font-weight:bold;";
 
 
 
@@ -15,8 +15,8 @@ dropdown_selector.addEventListener("click", function(event) {
     let index = buttons.indexOf(event.target);
         
     //Highlight the clicked button
-    buttons[index].style.backgroundColor = "rgba(0, 0, 0, 0.15)";
-    buttons[index].style.boxShadow = "inset 0px 5px 15px -10px";
+    // buttons[index].style.textTransform = "uppercase";
+    buttons[index].style.fontWeight = "bold";
     img_disp[index].style.display = "flex"; //Turn on the corresponding image container 
 
     //remove highlight from the previous

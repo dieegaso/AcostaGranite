@@ -104,28 +104,29 @@
             <h2 class="section-title">Know your square footage?</h2>
             <div class="Estimate_container">
                 <div class="Price_details">
-                    <p>Curious about the cost of your project? If you know
+                    <div>Curious about the cost of your project? If you know
                          the square footage of your space, our website makes
                           it easy to get an estimate! Simply enter your measurements
                            and select the type of granite you’re interested in—we’ll
                             give you a general idea of the cost to help you get started. 
                             It’s a quick 
                         and convenient way to plan your next upgrade with Acosta Custom Granite.
-                    </p>
+                    </div>
                 </div>
                 
                 <div class="Price_calculator">
                     <div class="sub_section">
-                        <h2>Estimate Here</h2> 
+                        <label for="Feet">Total Square Footage</label>
+                        <input class="user_input" type="number" name="Feet" placeholder="Enter Square Footage" id="ft_index" required> 
                     </div>
                     <div class="sub_section">
-                        <label for="Feet">Total Square Footage</label>
-                        <input type="tel" name="Feet" placeholder="Enter Square Footage" id="ft2" required> 
+                        <label for="Sink">Sinks</label>
+                        <input class="user_input" type="number" name="Sink" placeholder="Enter Amount of sinks" id="sink_index" required> 
                     </div>
                     
                     <div class="sub_section">
-                        <label > Type of Material</label>
-                        <select id="mySelect">
+                        <label >Stone</label>
+                        <select class="user_input" id="mySelect">
                             <option disabled hidden selected>Choose Material</option>
                             <option value="Granite">Granite</option>
                             <option value="Quarts">Quarts</option>

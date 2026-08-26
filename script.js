@@ -1,23 +1,22 @@
-
-
 // Estimate Installation Price
 let submit = document.getElementById("SubmitOption");
 let reset = document.getElementById("ResetOption");
 let yourPrice = document.getElementById("price-calculated");
 
-
-
 reset.onclick = function() {
-  
   document.getElementById("mySelect").selectedIndex = 0;
-  document.getElementById("ft2").value = "";
+  document.getElementById("ft_index").value = "";
+  document.getElementById("sink_index").value = "";
   yourPrice.innerHTML = "$ ---"
 }
 
 submit.onclick = () => {
   
   let type = document.getElementById("mySelect").value;
-  let ft = Number(document.getElementById("ft2").value);
+  let ft = Number(document.getElementById("ft_index").value);
+  let sink = Number(document.getElementById("sink_index").value);
+  let sink_cost = 150;
+  let flat_rate = 100;
   yourPrice.innerHTML = "test"
   
   if(ft > 0){
@@ -35,7 +34,7 @@ submit.onclick = () => {
         multiplier = 45.27;
         break;
     }    
-    let price = ft*multiplier + 100;
+    let price = ft*multiplier + sink_cost*sink + flat_rate;
     yourPrice.innerHTML = "$ " + price.toLocaleString("en-US");
     let container = document.getElementById("body");
     let overlay = document.createElement("div");
