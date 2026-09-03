@@ -15,12 +15,13 @@
 <body id="body">
     <header>
         <a href="index.html">Home</a>
-        <a href="Gallery.html">Gallery</a>
+        <a href="#Gallery_Section">Gallery</a>
         <a href="#footer">Contact Us</a>
         <a href="https://www.facebook.com/FranciscoPA1234" target="_blank" rel="noopener">Social</a>
     </header>
     
     <main>
+        <!-- introduction -->
         <section>
             <div class="introduction">
                 <img src="Images/Logo_v3.png" id="Logo">
@@ -32,6 +33,7 @@
             </div>
         </section>
         
+        <!-- Information -->
         <section class="info-container-wrapper">
             <h2 class="section-title">What kind of work we do?</h2>
             <div class="info-container">     
@@ -99,7 +101,59 @@
                 </div>
             </div>
         </section>
+
+        <!-- Gallery -->
+        <section id="Gallery_Section">
+            <h2 class="section-title">Gallery</h2>
+            <div class="dropdown_selector">
+                <button >Kitchen</button>
+                <button>Bathroom</button>
+                <button>Outdoor</button>
+                <button>Others</button>
+            </div>
+
+            <div class="dropdown_container">
+                <div class="dropdown_images" id="Kitchen">
+                    <img src="Images/Kitchen1.jpg">
+                    <img src="Images/Kitchen2.png">
+                    <img src="Images/Kitchen3.jpeg">
+                    <img src="Images/Kitchen4.jpg">
+                    <img src="Images/Kitchen5.jpg">
+                    <img src="Images/Kithcen6.jpg">
+                    <img src="Images/Kitchen1.jpg">
+                    <img src="Images/Kitchen2.png">
+                    <img src="Images/Kitchen3.jpeg">
+                    <img src="Images/Kitchen4.jpg">
+                    <img src="Images/Kitchen5.jpg">
+            </div>
+            <div class="dropdown_images" id="Bathroom">
+                <img src="Images/Kitchen2.png">
+                <img src="Images/Kitchen1.jpg">
+                <img src="Images/Kitchen1.jpg">
+                <img src="Images/Kitchen2.png">
+                <img src="Images/Kitchen3.jpeg">
+                <img src="Images/Kitchen4.jpg">
+                <img src="Images/Kitchen5.jpg">
+                <img src="Images/Kithcen6.jpg">
+                <img src="Images/Kitchen2.png">
+                <img src="Images/Kitchen2.png">
+            </div>
+            <div class="dropdown_images" id="Outdoor">
+                <img src="Images/Kitchen3.jpeg">
+                <img src="Images/Kitchen3.jpeg">
+                <img src="Images/Kitchen3.jpeg">
+                <img src="Images/Kitchen3.jpeg">
+            </div>
+            <div class="dropdown_images" id="Custom_and_Repairs">
+                <img src="Images/Kitchen4.jpg">
+                <img src="Images/Kitchen4.jpg">
+                <img src="Images/Kitchen4.jpg">
+                <img src="Images/Kitchen4.jpg">
+            </div>
+            </div>
+        </section>
             
+        <!-- Estimate -->
         <section class="Estimate">
             <h2 class="section-title">Know your square footage?</h2>
             <div class="Estimate_container">
@@ -117,11 +171,11 @@
                 <div class="Price_calculator">
                     <div class="sub_section">
                         <label for="Feet">Total Square Footage</label>
-                        <input class="user_input" type="number" name="Feet" placeholder="Enter Square Footage" id="ft_index" required> 
+                        <input class="user_input" type="tel" name="Feet" placeholder="Enter Square Footage" id="ft_index" required> 
                     </div>
                     <div class="sub_section">
                         <label for="Sink">Sinks</label>
-                        <input class="user_input" type="number" name="Sink" placeholder="Enter Amount of sinks" id="sink_index" required> 
+                        <input class="user_input" type="tel" name="Sink" placeholder="Enter Amount of sinks" id="sink_index" required> 
                     </div>
                     
                     <div class="sub_section">
@@ -149,9 +203,9 @@
                 </div>
                 
             </div>        
-        </section>    
+        </section>
             
-        
+        <!-- About us -->
         <section>
             <h2 class="section-title">About Us</h2>
             <div class="aboutUs-container"> 
@@ -185,16 +239,12 @@
         </section>
     </main>
     
+    <!-- footer -->
     <footer class="Footer" id="footer">
-        <h4>
-            Contact us at 832-432-4480
-        </h4>
-        <h4>
-            acostagranitet@gmail.com
-        </h4>
-        <h4>
+        <div>
+            Acostagranitet@gmail.com<br>
             AcostaGranite.com
-        </h4>
+        </div>
     </footer>
     
 </body>

@@ -294,16 +294,9 @@ section {
 
 .Footer {
     padding: 2em;
-    font-size: clamp(0.75rem,1.25vw,1rem);
-    justify-items: center;
-    background-color: rgba(0, 0, 0);
-    color: var(--fourth-color);
-}
-
-h4{
-    color: rgb(116, 114, 114);
-    font-size: 1.5em;
-    text-transform: uppercase;
+    font-size: 0.5em;
+    justify-items: left;
+    background-color: var(--Gold);
 }
 
 
