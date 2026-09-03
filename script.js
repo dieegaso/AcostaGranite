@@ -132,22 +132,55 @@ image_container.forEach(child =>{
         if(image_clicked_index >= 0){
 
             //create new div element 
-            new_div = new createElement("div","body","image_overlay");
-            new_div.newTag.style.cssText = "position:fixed; top:0; height:100%; width:100%; background-color: rgba(0,0,0,0.75); backdrop-filter: blur(5px); color: white; cursor: pointer; align-content: center; text-align: center; z-inder: 100;";
+      let new_div = new createElement("div","body","image_overlay");
+      let overlay = new_div.newTag;
+      overlay.style.cssText = "position:fixed; top:0; height:100%; width:100%; background-color: rgba(0,0,0,0.75); backdrop-filter: blur(5px); color: white; cursor: pointer; align-content: center; text-align: center; z-index: 100; touch-action: pan-y;";
 
- 
-            //create image tag and add styles
-            let img_tag = image_container[parent_clicked_index ].children[image_clicked_index].cloneNode(true);
-            document.querySelector(".image_overlay").appendChild(img_tag);
-            img_tag.style.cssText = "max-width: 75vw; min-width: 430px; max-height: 75vh;";
+      let active_index = image_clicked_index;
+      let img_tag = image_container[parent_clicked_index].children[active_index].cloneNode(true);
+      overlay.appendChild(img_tag);
+      img_tag.style.cssText = "max-width: 75vw; min-width: 430px; max-height: 75vh;";
             
             //create "close" text"//
-            document.querySelector(".image_overlay").appendChild(document.createElement("div")).textContent = "Close";
+      overlay.appendChild(document.createElement("div")).textContent = "Close";
 
-                
-            document.querySelector(".image_overlay").addEventListener("click", () => { 
-                document.querySelector(".image_overlay").remove();
-            })
+      let touch_start_x = 0;
+      let suppress_click = false;
+
+      const showImage = (index) => {
+        let images = image_container[parent_clicked_index].children;
+        active_index = (index + images.length) % images.length;
+        let next_image = images[active_index].cloneNode(true);
+        next_image.style.cssText = "max-width: 75vw; min-width: 430px; max-height: 75vh;";
+        overlay.replaceChild(next_image, img_tag);
+        img_tag = next_image;
+      };
+
+            let touch_start_y = 0;
+
+            overlay.addEventListener("touchstart", (touch_event) => {
+                touch_start_x = touch_event.changedTouches[0].clientX;
+                touch_start_y = touch_event.changedTouches[0].clientY;
+            }, { passive: true });
+
+            overlay.addEventListener("touchend", (touch_event) => {
+                let swipe_distance = touch_event.changedTouches[0].clientX - touch_start_x;
+                let vertical_distance = touch_event.changedTouches[0].clientY - touch_start_y;
+                if(Math.abs(swipe_distance) < 50 || Math.abs(swipe_distance) <= Math.abs(vertical_distance)){
+                    return;
+                }
+
+                showImage(active_index + (swipe_distance < 0 ? 1 : -1));
+                suppress_click = true;
+            }, { passive: true });
+
+            overlay.addEventListener("click", () => {
+                if(suppress_click){
+                    suppress_click = false;
+                    return;
+                }
+                overlay.remove();
+            });
         }
     })
 })
